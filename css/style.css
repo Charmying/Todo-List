@@ -1,0 +1,347 @@
+html, body {
+    background-color: rgb(211,211,211);
+}
+
+.time {
+    width: 100%;
+    margin-top: 10vh;
+    cursor: default;
+}
+
+.timeBlock {
+    width: 100%;
+    max-width: 275px;
+    margin: auto;
+    text-align: center;
+}
+
+.currentTime {
+    color: #77023e;
+    font-weight: 900;
+}
+
+.clock_month,
+.clock_day,
+.clock_year {
+    font-size: 36px;
+}
+
+.clock_hour,
+.clock_min,
+.clock_sec {
+    font-size: 32px;
+}
+
+.content {
+    width: 100%;
+}
+
+.contentBlock {
+    width: 100%;
+    max-width: 991px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+input{
+    outline-style: none ;
+    background: #ccc;
+    border: 0;
+    /* border: none; */
+    /* border: 1px #000 solid; */
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content_text {
+    width: 200px;
+    height: 40px;
+    line-height: 1.2;
+    padding: 0 2%;
+    margin-left: 1%;
+    margin-right: 0.5%;
+}
+
+.content_date {
+    width: 200px;
+    height: 40px;
+    line-height: 1.2;
+    padding: 0 2%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.content_time {
+    width: 200px;
+    height: 40px;
+    line-height: 1.2;
+    padding: 0 2%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.send {
+    margin-left: 0.5%;
+    margin-right: 1%;
+}
+
+.send_button {
+    width: 130px;
+    height: 40px;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background: #fff;
+    background: radial-gradient(circle,  #fff, #ccc);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.send_button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.send_button:before, .send_button:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow: -1px -1px 20px 0px rgba(255,255,255,1), -4px -4px 5px 0px rgba(255,255,255,1), 7px 7px 20px 0px rgba(0,0,0,.4), 4px 4px 5px 0px rgba(0,0,0,.3);
+}
+
+.send_button:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+}
+
+.send_button:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+}
+
+.send_button:hover{
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+}
+
+.send_button:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+}
+
+.send_button:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+}
+
+.send_button span:before, .send_button span:after {
+    position: absolute;
+    content: "";
+    box-shadow: -1px -1px 20px 0px rgba(255,255,255,1), -4px -4px 5px 0px rgba(255,255,255,1), 7px 7px 20px 0px rgba(0,0,0,.4), 4px 4px 5px 0px rgba(0,0,0,.3);
+}
+
+.send_button span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+
+.send_button span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+
+.send_button span:hover:before {
+    width: 100%;
+}
+
+.send_button span:hover:after {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #ce7c4d;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgba(206, 30, 30, 0.718);
+}
+
+.list li {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    cursor: default;
+    font-size: 18px;
+}
+
+.list li a {
+    margin-right: 50px;
+}
+
+.remindOne {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.remindTwo {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.remindThree {
+    margin-left: 50px;
+}
+
+
+
+.popup {
+    display: none;
+}
+
+.popup.active {
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    animation: animate 1s;
+}
+
+@keyframes animate {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.popup_content {
+    height: 60px;
+    width: 100px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.cross {
+    position: absolute;
+    top: 5%;
+    right: 7.5%;
+    font-size: 16px;
+    font-weight: 900;
+    color: #77023e;
+    cursor: pointer;
+}
+
+.cross.active ~ .popup{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 30px;
+    color: #154315e6;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s ease;
+}
+
+.popup_content h1 {
+    line-height: 2;
+    color: #2f4f4f;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.popup_content p {
+    text-align: justify;
+    line-height: 3;
+    color: #2f4f4f;
+    font-size: 18px;
+    font-weight: 900;
+    
+}
+
+@media (max-width: 991px) {
+    input {
+        display: block;
+    }
+
+    .contentBlock {
+        margin-top: 7.5vh;
+    }
+
+    .content_text,
+    .content_date,
+    .content_time {
+        margin: 0;
+        margin: auto;
+        margin-top: 3vh;
+    }
+
+    .send {
+        margin-top: 3vh;
+    }
+}
+
+@media (max-width: 575px) {
+    .list li a {
+        margin-right: 25px;
+    }
+    
+    .remindOne {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    .remindTwo {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .remindThree {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .list li a {
+        margin-right: 12.5px;
+    }
+    
+    .remindOne {
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+    }
+    
+    .remindTwo {
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+    }
+    .remindThree {
+        margin-left: 12.5px;
+    }
+}

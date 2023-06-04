@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="time">
+        <div class="timeBlock">
+            <p class="currentTime">
+                <span class="clock" id="clock">
+                    <span class="clock_month"></span>&nbsp;&nbsp;<span>/</span>&nbsp;&nbsp;
+                    <span class="clock_day"></span>&nbsp;&nbsp;<span>/</span>&nbsp;&nbsp;
+                    <span class="clock_year"></span><br>
+                    <span></span><br>
+                    <span class="clock_hour"></span>&nbsp;&nbsp;<span>:</span>&nbsp;&nbsp;
+                    <span class="clock_min"></span>&nbsp;&nbsp;<span>.</span>&nbsp;&nbsp;
+                    <span class="clock_sec"></span>&nbsp;&nbsp;<span></span>&nbsp;&nbsp;
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="content">
+        <!-- 全部內容 -->
+        <div class="contentBlock">
+            <!-- 輸入&加入 -->
+            <div class="addList">
+                <input type="text" class="content_text" placeholder="代辦事項">
+                <input type="date" class="content_date">
+                <input type="time" class="content_time">
+                <!-- <input type="button" class="send" value="加入代辦"> -->
+                <button class="send send_button"><span>加入代辦</span></button>
+            </div>
+
+            <!-- 加入的內容 -->
+            <ul class="list"></ul>
+
+            <!-- Popup -->
+            <div class="popup">
+                <div class="popup_content">
+                      <span class="cross">Close</span>
+                      <h1>時間到囉</h1>
+                      <p>快去做事囉</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/all.js"></script>
+    
+</body>
+</html>
